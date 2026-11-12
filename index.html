@@ -1,1 +1,465 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Humari Adhoori Si Story 💜</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+ margin:0;
+ min-height:100vh;
+ color:#fff8ff;
+ font-family:'DM Sans',sans-serif;
+ background:
+ radial-gradient(ellipse at 15% 15%,#49265f,transparent 38%),
+ radial-gradient(ellipse at 85% 55%,#382b68,transparent 38%),
+ linear-gradient(145deg,#100b1e,#211332,#130d24);
+ overflow-x:hidden;
+}
+
+section{
+ min-height:100vh;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ padding:30px 18px;
+}
+
+.card{
+ width:100%;
+ max-width:700px;
+ padding:45px 25px;
+ text-align:center;
+ border:1px solid #ffffff30;
+ border-radius:28px;
+ background:#ffffff0c;
+ backdrop-filter:blur(15px);
+ box-shadow:0 20px 70px #0005;
+}
+
+h1,h2{
+ font-family:'Playfair Display',serif;
+ font-weight:500;
+}
+h1{font-size:clamp(42px,9vw,68px)}
+h2{font-size:clamp(30px,7vw,46px)}
+
+p{
+ color:#eee3f5;
+ line-height:1.9;
+ font-size:16px;
+}
+
+.eyebrow{
+ color:#f3b9df;
+ letter-spacing:3px;
+ font-size:11px;
+ text-transform:uppercase;
+}
+
+.heart{font-size:45px}
+
+.italic{
+ font-family:'Playfair Display',serif;
+ font-style:italic;
+ color:#f3b9df;
+ font-size:23px;
+}
+
+button{
+ border:0;
+ border-radius:30px;
+ padding:14px 27px;
+ color:white;
+ font-size:14px;
+ background:linear-gradient(100deg,#b96eaa,#7862b7);
+ cursor:pointer;
+ margin-top:20px;
+}
+
+input{
+ width:100%;
+ max-width:350px;
+ padding:15px;
+ margin-top:15px;
+ border-radius:14px;
+ border:1px solid #ffffff40;
+ background:#ffffff12;
+ color:white;
+ text-align:center;
+ font-size:16px;
+ outline:none;
+}
+
+input::placeholder{color:#c9bad5}
+
+#feedback{
+ min-height:55px;
+ margin-top:15px;
+ color:#f3b9df;
+ line-height:1.6;
+}
+
+.hidden{display:none!important}
+#story{display:none}
+
+nav{
+ position:fixed;
+ bottom:12px;
+ left:50%;
+ transform:translateX(-50%);
+ background:#160e29dd;
+ border:1px solid #ffffff30;
+ border-radius:30px;
+ padding:10px;
+ display:flex;
+ gap:15px;
+ z-index:5;
+}
+
+nav a{
+ color:#f5d9ef;
+ text-decoration:none;
+ font-size:12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PASSWORD LOCK SCREEN -->
+
+<main id="lockScreen">
+<section>
+<div class="card">
+
+<div class="eyebrow">A little question before you enter</div>
+
+<div class="heart">🔐💜</div>
+
+<h1>Just One Question</h1>
+
+<h2 style="font-size:30px">
+What's your name or what's my name?
+</h2>
+
+<p>Soch ke answer dena 😂</p>
+
+<form id="unlockForm">
+
+<input
+ id="password"
+ type="text"
+ placeholder="Your answer..."
+ autocomplete="off"
+ required
+>
+
+<br>
+
+<button type="submit">
+Unlock our story 💗
+</button>
+
+</form>
+
+<div id="feedback"></div>
+
+</div>
+</section>
+</main>
+
+
+<!-- MAIN WEBSITE -->
+
+<div id="story">
+
+<main>
+
+<!-- SCREEN 1 -->
+
+<section id="start">
+<div class="card">
+
+<div class="eyebrow">Bas aapke liye...</div>
+<div class="heart">💜</div>
+
+<h1>Humari Adhoori Si Story</h1>
+
+<p>
+Yrr pta nhi ye website kaise start kru,
+kya likhu... bs jo bhi dil m tha wo
+likhne ka socha. Aap ek baar poora dekh lena.
+</p>
+
+<button onclick="go('beginning')">
+Chalein? ❤️
+</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 2 -->
+
+<section id="beginning">
+<div class="card">
+
+<div class="eyebrow">Part 01</div>
+
+<h2>Yaad Hai Aapko?</h2>
+
+<p>
+Yrr pta nhi aapko yaad h ya nhi,
+but mujhe humari starting aaj bhi yaad h.
+Wo choti choti baatein, bina kisi reason
+ke smile krna, aur aapse baat krne ka wait krna.
+</p>
+
+<p>
+Us time shayad mujhe andaza bhi nhi tha
+ki aap mere liye itni important ho jaogi.
+</p>
+
+<p class="italic">
+Aapke saath sab kuch thoda alag aur accha lagta tha. 💗
+</p>
+
+<button onclick="go('memories')">Aage dekho</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 3 -->
+
+<section id="memories">
+<div class="card">
+
+<div class="eyebrow">Part 02</div>
+
+<h2>Kuch Baatein...</h2>
+
+<p>
+Humare beech jo bhi tha na,
+wo mere liye kabhi normal nhi tha.
+Aapse baat krna, aapki fikr krna,
+aapki choti choti baatein yaad rkhna...
+mujhe ye sab accha lgta tha.
+</p>
+
+<p>
+Ho skta h maine har baar sahi se express
+na kiya ho, but aap mere liye special thi.
+Aur ho.
+</p>
+
+<button onclick="go('apart')">Phir kya hua?</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 4 -->
+
+<section id="apart">
+<div class="card">
+
+<div class="eyebrow">Part 03</div>
+
+<h2>Phir Sab Badal Gya</h2>
+
+<p>
+Phir pta nhi kab aur kaise humare beech
+distance aa gya. Baatein kam hoti gyi
+aur ek time aisa aa gya jab hum alag ho gye.
+</p>
+
+<p>
+Sach bolu toh mujhe accha nhi laga.
+Aaj bhi kabhi kabhi wo sab yaad aata h.
+Main ye nhi keh rha ki galti sirf kisi ek ki thi.
+Bas kaash hum ek dusre ko thoda aur samajh paate.
+</p>
+
+<p>
+I'm sorry agar meri kisi baat se aapko hurt hua ho.
+</p>
+
+<button onclick="go('today')">Abhi bhi...</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 5 -->
+
+<section id="today">
+<div class="card">
+
+<div class="eyebrow">Part 04</div>
+
+<h2>Aaj Bhi...</h2>
+
+<p>
+Yrr main ye nhi bolunga ki main sab bhool gya hu,
+kyunki aisa nhi h. Aapki yaad aati h.
+Kabhi koi song sunke, kabhi koi choti si baat dekh ke.
+</p>
+
+<p>
+Main aapse koi promise ya reply nhi maang rha.
+Bas itna chahta tha ki aapko pta ho
+ki jo feel krta tha wo fake nhi tha.
+</p>
+
+<p class="italic">
+Aap aaj bhi mere liye matter krti ho. ❤️
+</p>
+
+<button onclick="go('hope')">Last page...</button>
+
+</div>
+</section>
+
+
+<!-- FINAL SCREEN -->
+
+<section id="hope">
+<div class="card">
+
+<div class="eyebrow">The last page...</div>
+
+<div class="heart">♡</div>
+
+<h2>Ek Happy Ending?</h2>
+
+<p>
+Yrr mujhe nhi pta humari story ka end kya hoga.
+I know ab hum saath nhi hain,
+aur shayad cheezein pehle jaisi bhi na ho.
+</p>
+
+<p>
+But sach kahu toh aaj bhi aap mere liye
+utni hi special ho. Main aapse kuch expect nhi kr rha,
+na hi aapko force krna chahta hu.
+</p>
+
+<p>
+Bs kabhi kabhi sochta hu ki kaash ek baar
+phir sab theek ho jaye, hum phir se baat karein,
+hasein aur ek dusre ko samjhein.
+</p>
+
+<p class="italic">
+And after everything, after all this distance and silence...
+</p>
+
+<h2 style="color:#f3b9df">
+I STILL LOVE YOU. ❤️
+</h2>
+
+<p style="font-size:12px">
+Bas ye baat aapse kehni thi. Apna khayal rkhiyega.
+</p>
+
+<button onclick="
+document.getElementById('lastWords').classList.remove('hidden');
+this.style.display='none';
+">
+Ek last baat...
+</button>
+
+<p id="lastWords" class="italic hidden">
+Agar kabhi aap bhi chaho, toh hum apni story
+ko ek nayi beginning de skte hain. 💜
+</p>
+
+</div>
+</section>
+
+</main>
+
+<nav>
+<a href="#start">Start</a>
+<a href="#beginning">Shuruaat</a>
+<a href="#apart">Phir...</a>
+<a href="#hope">Ending</a>
+</nav>
+
+</div>
+
+
+<!-- PASSWORD CHECK -->
+
+<script>
+
+const form = document.getElementById('unlockForm');
+const field = document.getElementById('password');
+const feedback = document.getElementById('feedback');
+
+form.addEventListener('submit', function(event){
+
+ event.preventDefault();
+
+ const answer = field.value.trim().toLowerCase();
+
+ if(answer === 'chomu' || answer === 'kittu'){
+
+  document.getElementById('lockScreen').style.display='none';
+  document.getElementById('story').style.display='block';
+
+  window.scrollTo({top:0,behavior:'smooth'});
+
+ }
+
+ else if(answer === 'suhana'){
+
+  feedback.textContent =
+  'Haa ik aapka naam Suhana h, but but but ye aapka naam nhi h 😂';
+
+ }
+
+ else if(answer === 'shorya' || answer === 'om'){
+
+  feedback.textContent =
+  'Haa haa ik mera naam ky h, but ye mera naam nhi h 😂';
+
+ }
+
+ else{
+
+  feedback.textContent =
+  'Incorrect password! 😂 Dobara try kro.';
+
+ }
+
+ if(answer !== 'chomu' && answer !== 'kittu'){
+  field.select();
+ }
+
+});
+
+
+function go(id){
+
+ document.getElementById(id).scrollIntoView({
+  behavior:'smooth'
+ });
+
+}
+
+</script>
+
+</body>
+</html>
+
